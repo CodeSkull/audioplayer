@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.effect.GaussianBlur?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <Button fx:id="playPauseButton" layoutX="264.0" layoutY="327.0" mnemonicParsing="false" onAction="#playPauseSong" prefHeight="59.0" prefWidth="74.0">
+         <graphic>
+            <ImageView fitHeight="41.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/playpause.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button fx:id="nextSongButton" layoutX="347.0" layoutY="336.0" mnemonicParsing="false" onAction="#fastForwardSong" prefHeight="41.0" prefWidth="52.0">
+         <graphic>
+            <ImageView fitHeight="29.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/fastforward.png" />
+               </image></ImageView>
+         </graphic></Button>
+      <Button fx:id="prevSongButton" layoutX="203.0" layoutY="336.0" mnemonicParsing="false" onAction="#rewindSong" prefHeight="41.0" prefWidth="52.0">
+         <graphic>
+            <ImageView fitHeight="27.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/rewind.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Label fx:id="songCurrentTime" layoutX="467.0" layoutY="248.0" prefHeight="34.0" prefWidth="80.0" text="00:00/00:00">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="songFolderPath" editable="false" layoutX="54.0" layoutY="14.0" prefHeight="31.0" prefWidth="308.0" promptText="Select path to song folder" />
+      <Button fx:id="browsePathButton" layoutX="391.0" layoutY="14.0" mnemonicParsing="false" onAction="#chooseSongDirectory" text="Browse" />
+      <ComboBox fx:id="songListComboBox" layoutX="54.0" layoutY="69.0" onAction="#selectionChanged" prefHeight="31.0" prefWidth="308.0" promptText="Select Song" />
+      <AreaChart fx:id="spectrumChart" alternativeRowFillVisible="false" animated="false" createSymbols="false" horizontalGridLinesVisible="false" horizontalZeroLineVisible="false" layoutX="31.0" layoutY="140.0" legendVisible="false" prefHeight="158.0" prefWidth="355.0" styleClass="bar-chart" verticalGridLinesVisible="false" verticalZeroLineVisible="false">
+        <xAxis>
+           <CategoryAxis animated="false" side="BOTTOM" tickLabelsVisible="false" tickMarkVisible="false" visible="false" />
+        </xAxis>
+        <yAxis>
+           <NumberAxis animated="false" autoRanging="false" minorTickVisible="false" side="LEFT" tickLabelsVisible="false" tickMarkVisible="false" upperBound="55.0" visible="false" />
+        </yAxis>
+         <effect>
+            <GaussianBlur radius="2.5" />
+         </effect>
+      </AreaChart>
+      <Slider fx:id="songLengthSlider" layoutX="54.0" layoutY="289.0" prefHeight="31.0" prefWidth="500.0" />
+      <Slider fx:id="volumeSlider" layoutX="448.0" layoutY="348.0" prefHeight="18.0" prefWidth="106.0" />
+   </children>
+</AnchorPane>

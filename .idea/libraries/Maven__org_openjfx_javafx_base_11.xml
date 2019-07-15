@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Maven: org.openjfx:javafx-base:11">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/openjfx/javafx-base/11/javafx-base-11.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/openjfx/javafx-base/11/javafx-base-11-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="file://D:/Downloads/openjfx-11.0.2_windows-x64_bin-sdk/javafx-sdk-11.0.2/lib" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/openjfx/javafx-base/11/javafx-base-11-sources.jar!/" />
+    </SOURCES>
+    <jarDirectory url="file://D:/Downloads/openjfx-11.0.2_windows-x64_bin-sdk/javafx-sdk-11.0.2/lib" recursive="false" type="SOURCES" />
+  </library>
+</component>
