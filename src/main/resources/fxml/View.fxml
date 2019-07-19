@@ -55,7 +55,7 @@
             <GaussianBlur radius="2.5" />
          </effect>
       </AreaChart>
-      <Slider fx:id="songLengthSlider"    layoutX="54.0" layoutY="289.0" prefHeight="31.0" prefWidth="500.0" />
+      <Slider fx:id="songLengthSlider" layoutX="54.0" layoutY="289.0" prefHeight="31.0" prefWidth="500.0" />
       <Slider fx:id="volumeSlider" layoutX="432.0" layoutY="348.0" max="1.0" prefHeight="18.0" prefWidth="106.0" value="1.0" />
       <Label fx:id="volumeLabel" layoutX="547.0" layoutY="347.0" text="100 %" />
    </children>
