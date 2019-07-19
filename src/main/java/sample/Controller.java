@@ -66,7 +66,10 @@ public class Controller implements Initializable {
     @FXML
     private Slider songLengthSlider = new Slider();
     @FXML
-    private Slider volumeSlider;
+    private Slider volumeSlider = new Slider();
+    @FXML
+    private Label volumeLabel;
+    private double volume;
 
     //Initialising visualizer axes
     @Override
@@ -230,6 +233,23 @@ public class Controller implements Initializable {
 
     //Setup song time slider and volume slider
     void componentsInit() {
+
+        volume = 1.0;
+        volumeLabel.setText(String.format("%02d %%", (int) (volume * 100)));
+        volumeSlider.setValue(1.0);
+
+        volumeSlider.valueProperty().addListener(new InvalidationListener() {
+            @Override
+            public void invalidated(Observable observable) {
+                if (volumeSlider.isPressed()) {
+                    volume = volumeSlider.getValue();
+                    Platform.runLater(() -> volumeLabel.setText(String.format("%01d %%", (int) (volume * 100))));
+                    if (mediaPlayer != null) {
+                        mediaPlayer.setVolume(volume);
+                    }
+                }
+            }
+        });
 
         songLengthSlider.valueProperty().addListener(new InvalidationListener() {
             @Override
