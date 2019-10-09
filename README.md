@@ -1,2 +1,2 @@
 # audioplayer
-Simple audio player made in Java
+MP3 player made fully within JavaFX
