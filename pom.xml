@@ -23,7 +23,7 @@
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-media</artifactId>
-            <version>11</version>
+            <version>17.0.10</version>
             <classifier>win</classifier>
         </dependency>
 
